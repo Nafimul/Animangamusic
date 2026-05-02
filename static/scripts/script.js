@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const loadingMessage = document.getElementById("loading")
     loadingMessage.hidden = true;
 
-    let testing = true;
+    let testing = false;
     let music = new Audio();
     let sfx = new Audio();
     let page_files = [];
