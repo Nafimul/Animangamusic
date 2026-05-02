@@ -25,4 +25,5 @@
 img {
     position: absolute;
     top: 300px;
+    max-width: 1200px;
 }

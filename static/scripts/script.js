@@ -70,15 +70,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
                 if (i == 0) {
                     console.log(typeof(effect_selections[i]));
-                    playMusic()
+                    displayCurrPage()
                 }
             }
         }
         else {
-            playMusic()
+            displayCurrPage();
         }
 
-        displayCurrPage();
         loadingMessage.hidden = true;
     }
 
