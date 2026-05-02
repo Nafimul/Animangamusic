@@ -1,0 +1,2 @@
+all ai questions asked:
+how to get a list of files from a input type=file in javascript

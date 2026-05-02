@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script type='text/javascript' src='{{ url_for("static", filename="scripts/script.js") }}'></script>
+        <link rel="stylesheet" type='text/css' href='{{ url_for("static", filename="styles/styles.css") }}'/>
+        {% block stylesheet %}{% endblock %}
+    </head>
+    <body>
+        {% for message in get_flashed_messages() %}
+            <div id="flash">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+        <ul class='navbar'>
+            <li><a href='{{ url_for("root") }}'>Home</a></li>
+        </ul>
+
+
+        
+
+        {% block content %}{% endblock %}
+    </body>
+</html>

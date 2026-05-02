@@ -1,0 +1,4 @@
+static/comics/
+.venv/
+.env
+__pycache__/
