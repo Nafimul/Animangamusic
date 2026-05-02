@@ -5,19 +5,6 @@
         {% block stylesheet %}{% endblock %}
     </head>
     <body>
-        {% for message in get_flashed_messages() %}
-            <div id="flash">
-                {{ message }}
-            </div>
-        {% endfor %}
-
-        <ul class='navbar'>
-            <li><a href='{{ url_for("root") }}'>Home</a></li>
-        </ul>
-
-
-        
-
         {% block content %}{% endblock %}
     </body>
 </html>

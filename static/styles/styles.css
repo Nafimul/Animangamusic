@@ -7,5 +7,9 @@
     background-color: white;
 }
 
-button {
+#horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
 }

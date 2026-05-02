@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
             effect_selections = new Array(page_files.length)
             for (let i = 0; i < page_urls.length; i++)
             {
-                if (i % 5 == 0 || i == 0) {
+                if (i % 3 == 0 || i == 0) {
                     effect_selections[i] = await getGeminiEffectSelection(page_files[i]);
                 }
                 if (i == 0) {
@@ -175,4 +175,14 @@ document.addEventListener("DOMContentLoaded", function() {
     nextButton.addEventListener("click", nextPage)
     file_upload.addEventListener("change", uploadFiles);
     prevButton.addEventListener("click", prevPage)
+
+    document.addEventListener("keydown", e => {
+    switch (event.key) {
+        case "ArrowRight":
+            nextPage();
+        break;
+        case "ArrowLeft":
+            prevPage();
+        break;
+    }});
 })

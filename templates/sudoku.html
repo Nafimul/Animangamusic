@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %} Sudoku {% endblock %}
+{% block stylesheet %}<link rel="stylesheet" type='text/css' href='{{ url_for("static", filename="styles/sudoku.css") }}'/>{% endblock %}
+{% block content %}
+<h1> Today's Sudoku </h1>
+<img id="sudoku_logo" src='{{ url_for("static", filename="assets/sudoku.png") }}'>
+<p> Enter your answers. Press submit when done. Enter negative numbers when unsure. </p>
+<form action="/sudoku" method="POST">
+    <div id="sudoku">
+        {% for row in range(saved_sudoku_state|length) %}
+            {% for col in range(saved_sudoku_state[0]|length) %}
+                <input
+                class="sudoku_single_box {{ 'unchangeable' if starting_sudoku[row][col] != 0 else ''}}" 
+                name='row{{row+1}}col{{col+1}}' 
+                type="number" 
+                value='{{ saved_sudoku_state[row][col] if saved_sudoku_state[row][col] }}' 
+                {{ 'readonly' if starting_sudoku[row][col] != 0 else ''}}
+                min="-9"
+                max="9"
+                > 
+                </input>
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <button type="submit" name="submit"> SUBMIT </button>
+    <button type="submit" name="save"> SAVE </button>
+</form>
+{% endblock %}
