@@ -8,10 +8,12 @@
 
       <label for="upload">Uplad your comics!:</label>
       <input type="file" id="upload" name="upload" accept=".jpg, .jpeg, .png" multiple/>
+      <h1 id="loading"> Loading... </h1>
+
 
       <button id="next"> NEXT </button>
       <button id="prev"> PREV </button>
       
-      <img src='{{ url_for("static", filename = "comics/DBZ_CH124/002.jpg") }}' id="comic_page">
+      <img src='' id="comic_page">
   </section>
 {% endblock %}

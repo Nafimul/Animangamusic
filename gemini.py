@@ -1,5 +1,7 @@
 from google import genai
 from google.genai import types
+import dotenv
+from dotenv import load_dotenv
 
 def promptFromImageBytes(bytes, prompt):
         client = genai.Client()

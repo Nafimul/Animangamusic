@@ -5,3 +5,7 @@ flask rest api endpoint that accept a post request with parameter and returns th
 how to post image to rest api
 how to post image to rest api with multipart/form-data
 flask and js example of uploading an image to flask api and the api returning the same image
+what datatype does a input type=file multiple have in it's files property
+
+                let music_url = "static/random_music/" + effect_selections[0]["mood"] + ".mp3";
+why is #sym:effect_selections[0]  undefined in  but gets correctly console.logged before that?
