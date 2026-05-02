@@ -1,2 +1,7 @@
 all ai questions asked:
 how to get a list of files from a input type=file in javascript
+post to rest api javascript
+flask rest api endpoint that accept a post request with parameter and returns that parameter
+how to post image to rest api
+how to post image to rest api with multipart/form-data
+flask and js example of uploading an image to flask api and the api returning the same image

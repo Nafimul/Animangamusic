@@ -6,12 +6,6 @@
       <h1> Manganime! </h1>
       <h2> Bridging the gap from manga to anime </h2>
 
-      <audio id="music" src='{{ url_for("static", filename="random_music/battle.mp3") }}'> PLAY MUSIC </audio>
-      <audio controls>
-        <source id="audio" src='{{ url_for("static", filename="random_music/battle.mp3") }}' type="audio/mp3">
-        Your browser does not support the audio tag.
-      </audio>
-
       <label for="upload">Uplad your comics!:</label>
       <input type="file" id="upload" name="upload" accept=".jpg, .jpeg, .png" multiple/>
 
