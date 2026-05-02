@@ -10,23 +10,14 @@ document.addEventListener("DOMContentLoaded", function() {
     loadingMessage.hidden = true;
 
     let testing = true;
-
-
-   
-    let audio = new Audio();
+    let music = new Audio();
+    let sfx = new Audio();
     let page_files = [];
     let page_urls = [];
     let effect_selections = []
     let page_num = 0;
     let currAudioName;
 
-
-
-
-
-
-    // let DEFAULT_PAGE_URLS = ["static/comics/DBZ_CH124/003.jpg", "static/comics/DBZ_CH124/004.jpg", "static/comics/DBZ_CH124/005.jpg", "static/comics/DBZ_CH124/006.jpg"]
-    // page_urls = DEFAULT_PAGE_URLS;
     let DEFAULT_EFFECT_SELECTIONS = new Array(16);
     DEFAULT_EFFECT_SELECTIONS[0] = {
     "music_gen_prompt" : "A sudden, dramatic orchestral stinger followed by a somber, tense theme. Low, brooding strings and high-pitched, uneasy violin notes to convey shock and despair at seeing friends severely wounded.",
@@ -57,11 +48,6 @@ document.addEventListener("DOMContentLoaded", function() {
     "probability_that_mood_changed_since_last_page" : 9
     }
     effect_selections = DEFAULT_EFFECT_SELECTIONS;
-
-
-
-
-
 
     async function uploadFiles(e) {
         loadingMessage.hidden = false;
@@ -119,8 +105,8 @@ document.addEventListener("DOMContentLoaded", function() {
         if (page_files && page_urls[page_num]) {
             comicPage.src = page_urls[page_num];
             if (effect_selections[page_num]) {
-                let music_url = "static/random_music/" + effect_selections[page_num]["mood"] + ".mp3";
-                playMusic(music_url)
+                playMusic()
+                playSfx()
             }
         }
     }
@@ -139,13 +125,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     
     async function getGeminiEffectSelection(page_file) {
-        // return {
-        //     "music_gen_prompt" : "intense, dramatic orchestral music with high tension, sudden tragic climax, dark and cinematic",
-        //     "mood" : "shock",
-        //     "sound_effect" : "explosion",
-        //     "slow_panel_effect" : "zoom_in",
-        //     "probability_that_mood_changed_since_last_page" : 10
-        // }
         const formData = new FormData();
         formData.append('image', page_file);
 
@@ -163,18 +142,24 @@ document.addEventListener("DOMContentLoaded", function() {
             if (currAudioName == effect_selections[page_num]["mood"])
                 return
         }
-
         currAudioName = effect_selections[page_num]["mood"]
         let url = "static/random_music/" + currAudioName + ".mp3";
-        console.log(url);
-        audio.pause();
-        audio = new Audio(url);
-        audio.play();
+        music.pause();
+        music = new Audio(url);
+        music.volume = 0.4;
+        music.play();
     }
 
-    nextButton.addEventListener("click", nextPage)
+    function playSfx() {
+        let sfx_name = effect_selections[page_num]["sound_effect"];
+        sfx.pause();
+        sfx = new Audio("static/random_sfx/" + sfx_name +".mp3");
+        sfx.play();
+    }
+
+    nextButton.addEventListener("click", nextPage);
     file_upload.addEventListener("change", uploadFiles);
-    prevButton.addEventListener("click", prevPage)
+    prevButton.addEventListener("click", prevPage);
 
     document.addEventListener("keydown", e => {
     switch (event.key) {
@@ -185,4 +170,6 @@ document.addEventListener("DOMContentLoaded", function() {
             prevPage();
         break;
     }});
+
+    
 })

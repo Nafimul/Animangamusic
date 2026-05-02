@@ -1,1 +1,11 @@
 # Manganimusic
+
+A site that automatically adds music to your manga that aligns with the mood of the story using the gemini api!
+
+Credits:
+sound effects:
+heavy impact by universfield at https://pixabay.com/sound-effects/household-impact-cinematic-boom-02-487858/
+light impact by RibhavAgrawal at https://pixabay.com/sound-effects/film-special-effects-hit-by-a-wood-230542/
+whoosh by DRAGON-STUDIO at https://pixabay.com/sound-effects/film-special-effects-simple-whoosh-382724/
+blast by Hoscalegeek (Freesound) at https://pixabay.com/sound-effects/film-special-effects-laser-zap-90575/
+tension stinger by GD_SALMAN t https://pixabay.com/sound-effects/film-special-effects-tension-stinger-ambience-355381/
