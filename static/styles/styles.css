@@ -13,3 +13,16 @@
     align-items: center;
     background-color: white;
 }
+
+#comic_page {
+    z-index: 1;
+}
+
+#background {
+    filter:blur(400px);
+}
+
+img {
+    position: absolute;
+    top: 300px;
+}

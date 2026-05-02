@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const prevButton = document.getElementById("prev");
     const file_upload = document.getElementById("upload");
     const comicPage = document.getElementById("comic_page");
+    const background = document.getElementById("background");
     const audio_source = document.getElementById("audio")
     const loadingMessage = document.getElementById("loading")
     loadingMessage.hidden = true;
@@ -104,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
     async function displayCurrPage() {
         if (page_files && page_urls[page_num]) {
             comicPage.src = page_urls[page_num];
+            background.src = comicPage.src;
             if (effect_selections[page_num]) {
                 playMusic()
                 playSfx()
