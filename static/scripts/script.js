@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
     effect_selections = DEFAULT_EFFECT_SELECTIONS;
 
     async function uploadFiles(e) {
+        page_num = 0
         loadingMessage.hidden = false;
 
         page_files = file_upload.files;
@@ -112,6 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    // helper method removes the parts of a string that are not json that gemini api sometimes adds
     function removeNonJsonParts(old) {
         if (old[0] != "{") {
             console.log("fixing")
@@ -124,7 +126,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    
     async function getGeminiEffectSelection(page_file) {
         const formData = new FormData();
         formData.append('image', page_file);
