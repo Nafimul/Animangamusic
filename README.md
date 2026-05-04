@@ -28,12 +28,12 @@ flask run
 - upload your comics, wait for it to load and read!
 
 Credits:
-sound effects:
-heavy impact by universfield at https://pixabay.com/sound-effects/household-impact-cinematic-boom-02-487858/
-light impact by RibhavAgrawal at https://pixabay.com/sound-effects/film-special-effects-hit-by-a-wood-230542/
-whoosh by DRAGON-STUDIO at https://pixabay.com/sound-effects/film-special-effects-simple-whoosh-382724/
-blast by Hoscalegeek (Freesound) at https://pixabay.com/sound-effects/film-special-effects-laser-zap-90575/
-tension stinger by GD_SALMAN t https://pixabay.com/sound-effects/film-special-effects-tension-stinger-ambience-355381/
+- heavy impact by universfield at https://pixabay.com/sound-effects/household-impact-cinematic-boom-02-487858/
+- light impact by RibhavAgrawal at https://pixabay.com/sound-effects/film-special-effects-hit-by-a-wood-230542/
+- whoosh by DRAGON-STUDIO at https://pixabay.com/sound-effects/film-special-effects-simple-whoosh-382724/
+- blast by Hoscalegeek (Freesound) at https://pixabay.com/sound-effects/film-special-effects-laser-zap-90575/
+- tension stinger by GD_SALMAN t https://pixabay.com/sound-effects/film-special-effects-tension-stinger-ambience-355381/
 
-This readme was updated after the end of the hackathon
+This readme was updated after the end of the hackathon.
+
 ai_use.txt containes every ai prompt that was used in the making of this project, mostly just general syntax that happened to be faster to find with an ai overview.
