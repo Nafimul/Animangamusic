@@ -1,7 +1,8 @@
-# Manganimusic
+# MangAniMusic
 
 A site that automatically adds music to your manga that aligns with the mood of the story using the gemini api!
-Made in 6.5 hours during a hackathon with basically no ai
+
+Made in 6.5 hours during a hackathon with basically no ai: https://devpost.com/software/animangamusic?ref_content=my-projects-tab&ref_feature=my_projects.
 
 Features:
 - Upload your comics and/or manga and read
@@ -15,11 +16,14 @@ To use:
 - Install python if you haven't already: https://www.python.org/downloads/
 - open a terminal in the root folder
 - for linux or git bash (other os' have slightly different commands) run:
-  bash```
-  python -m venv .venv
-  pip install -r requirements.txt
-  source .venv/Scripts/activate
-  flask run```
+
+```
+python -m venv .venv
+pip install -r requirements.txt
+source .venv/Scripts/activate
+flask run
+```
+  
 - open http://127.0.0.1:5000/ in a browser
 - upload your comics, wait for it to load and read!
 
