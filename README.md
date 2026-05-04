@@ -1,3 +1,4 @@
+![Project Demo](screenshots/demo.png)
 # MangAniMusic
 
 A site that automatically adds music to your manga that aligns with the mood of the story using the gemini api!
